@@ -7,6 +7,7 @@ public class SnakeAndLadder {
 	static final int LADDER = 1;
 	static final int SNAKE = 2;
 	static final int NOPLAY = 0;
+	static int totalDiceCount = 0;
 
 	public static int diceRoll() {
 		Random random = new Random();
@@ -30,11 +31,13 @@ public class SnakeAndLadder {
 
 	public static void main(String[] args) {
 		while (position < 100) {
+			totalDiceCount++;
 			int dice = diceRoll();
 			System.out.println("Dice Roll number =" + diceRoll());
 			checkoption(dice);
 			System.out.println("Player current position = " + position);
 		}
+		System.out.println("total Dice Count:" + totalDiceCount);
 
 	}
 
