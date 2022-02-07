@@ -19,16 +19,21 @@ public class SnakeAndLadder {
 		} else if(check == SNAKE) {
 			position = position-dice;
 		}
+		else if (position < 0) {
+			position = 0;
+		}
 		else {
 			position = position;
 		}
 	}
 
 	public static void main(String[] args) {
+		while (position < 100) {
 		int dice = diceRoll();
 		System.out.println("Dice Roll number =" + diceRoll());
 		checkoption(dice);
 		System.out.println("Player current position = " + position);
+		}
 		
 	}
 
